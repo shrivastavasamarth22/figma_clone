@@ -135,6 +135,10 @@ export default function Page() {
 		window.addEventListener("resize", () => {
 			handleResize({ fabricRef });
 		});
+
+		return () => {
+			canvas.dispose();
+		};
 	}, []);
 
 	useEffect(() => {
